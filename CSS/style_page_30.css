@@ -1,0 +1,282 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #FFD76A;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    background: #FFD76A;
+    min-height: 480px;
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.paw-print {
+    position: absolute;
+    background: none;
+    opacity: 0.18;
+    z-index: 1;
+}
+.large-paw-1 {
+    top: 60px;
+    left: 80px;
+    width: 180px;
+    height: 120px;
+    background: none;
+}
+.large-paw-2 {
+    top: 40px;
+    right: 60px;
+    width: 120px;
+    height: 80px;
+    background: none;
+}
+/* Paw print shapes using pseudo-elements */
+.paw-print::before, .paw-print::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+.large-paw-1::before {
+    width: 90px; height: 70px; left: 40px; top: 30px;
+}
+.large-paw-1::after {
+    width: 40px; height: 40px; left: 120px; top: 10px;
+}
+.large-paw-2::before {
+    width: 60px; height: 40px; left: 30px; top: 20px;
+}
+.large-paw-2::after {
+    width: 30px; height: 30px; left: 80px; top: 0px;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 0 0 0;
+}
+
+.text-content {
+    flex: 1;
+    padding-left: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.logo-circle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-bottom: 18px;
+    font-size: 1em;
+    color: #fff;
+}
+.logo-text {
+    font-size: 1em;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.heart-icon {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 8px;
+}
+
+.text-content h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 18px;
+    line-height: 1.1;
+}
+
+.text-content p {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 18px;
+    line-height: 1.5;
+    max-width: 420px;
+}
+
+.schedule-button {
+    background: #6CB6F8;
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.3s;
+    box-shadow: 0 2px 8px rgba(58,123,213,0.10);
+}
+.schedule-button:hover {
+    background: #4a90e2;
+}
+
+.image-content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 320px;
+    height: 420px;
+}
+
+.main-dog-image {
+    width: 340px;
+    max-width: 100%;
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    display: block;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.small-dog-card {
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+.small-dog-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 8px;
+    background: #FFD76A;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.cross-icon {
+    width: 32px;
+    height: 32px;
+    background: none;
+    position: relative;
+}
+.cross-icon::before, .cross-icon::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 0;
+    width: 4px;
+    height: 32px;
+    background: #FFD76A;
+    border-radius: 2px;
+}
+.cross-icon::before {
+    transform: rotate(45deg);
+}
+.cross-icon::after {
+    transform: rotate(-45deg);
+}
+
+.features-section {
+    width: 100%;
+    background: #fff;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px 0 0 0;
+    margin-top: -32px;
+    position: relative;
+    z-index: 4;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 18px 24px;
+    min-width: 180px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    background: #FFD76A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-1 {
+    background-image: url('https://via.placeholder.com/48x48/FFD700/FFFFFF?text=Cat');
+    background-size: cover;
+}
+.icon-2 {
+    background-image: url('https://via.placeholder.com/48x48/FFD700/FFFFFF?text=Dog');
+    background-size: cover;
+}
+.icon-3 {
+    background-image: url('https://via.placeholder.com/48x48/FFD700/FFFFFF?text=Bird');
+    background-size: cover;
+}
+
+.feature-card h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #4a2c18;
+    margin-bottom: 6px;
+}
+
+.feature-card p {
+    font-size: 0.98em;
+    color: #4a2c18;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 18px;
+        padding-left: 0;
+    }
+    .text-content {
+        padding-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .image-content {
+        min-width: 180px;
+        height: 220px;
+    }
+    .main-dog-image {
+        width: 180px;
+    }
+    .features-section {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 0 0 0;
+    }
+}
