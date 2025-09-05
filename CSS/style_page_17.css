@@ -1,0 +1,156 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f6f6f6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 32px 16px;
+    background: #fafafa;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #444;
+    text-align: center;
+    margin-bottom: 24px;
+    max-width: 600px;
+}
+
+.explore-btn {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 32px;
+    transition: background 0.3s;
+}
+.explore-btn:hover {
+    background: #444;
+}
+
+.card-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: none;
+    position: relative;
+    top: 0;
+    margin-bottom: -40px;
+    z-index: 2;
+}
+
+.tab {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    padding: 18px 0 12px 0;
+    width: 170px;
+    margin: 0 6px;
+    text-align: center;
+}
+
+.tab h3 {
+    font-size: 1.05em;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    color: #222;
+}
+
+.tab p {
+    font-size: 0.95em;
+    color: #888;
+    margin: 0;
+}
+
+.main-image {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 32px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+    background: #eaeaea;
+    z-index: 1;
+}
+
+.main-image img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+}
+
+.gallery {
+    display: flex;
+    gap: 24px;
+    margin-top: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.gallery-img {
+    width: 220px;
+    height: 160px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #eaeaea;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        max-width: 98vw;
+        padding: 16px 4px;
+    }
+    .main-image {
+        height: auto;
+    }
+    .gallery {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+    .gallery-img {
+        width: 90vw;
+        height: 140px;
+    }
+    .card-tabs {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .tab {
+        width: 90vw;
+        margin: 8px 0;
+    }
+}
