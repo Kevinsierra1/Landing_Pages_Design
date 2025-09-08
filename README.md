@@ -65,6 +65,8 @@ Esto permitió una mejor organización, colaboración y control del código dura
 
 Ejemplo de algunas plantillas incluidas:
 
+![Ver todas las capturas](https://i.ibb.co/MkP25LMG/image.png)
+
 🌐 Figmma
 📰 Layouts tipo blog/revista
 
