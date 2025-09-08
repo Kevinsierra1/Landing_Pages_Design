@@ -1,3 +1,4 @@
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +9,11 @@ body {
     font-family: Sans-serif;
 }
 
+/* ----- CONTENEDOR PRINCIPAL ----- */
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Dos columnas iguales */
+    /* dos columnas */
     grid-template-areas:
         "principal derecha"
         "abajo1 derecha";
@@ -27,8 +29,7 @@ body {
     gap: 10px;
 }
 
-/* Bloques con imágenes */
-
+/* Imagen principal */
 .principal {
     grid-column: 1;
     grid-row: 1;
@@ -36,11 +37,10 @@ body {
 }
 
 .principal img {
-    width: 500%;
+    width: 100%;
+    /* 🔹 antes estaba en 500% */
     height: 500px;
-    /* altura fija */
     object-fit: cover;
-
 }
 
 .principal .img-grande {
@@ -49,7 +49,7 @@ body {
     object-fit: cover;
 }
 
-
+/* Bloques de abajo */
 .abajo1 {
     grid-column: 1;
     grid-area: abajo1;
@@ -63,23 +63,19 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0px;
-    /*redondeado*/
 }
 
+/* Bloque derecha */
 .bloque-derecha {
     grid-column: 2;
     grid-row: 1 / span 2;
-    /* ocupa las dos filas */
     display: block;
-    align-items: center;
-    justify-content: center;
-    width: 200%;
-    /* ocupa toda la columna */
+    width: 100%;
+    /* 🔹 antes estaba en 200% */
     height: 100%;
 }
 
-
+/* Imagenes dentro de bloques */
 .bloque {
     position: relative;
     width: 100%;
@@ -91,106 +87,81 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* 🔹 no se deforma */
     display: block;
-    flex: 2;
-
 }
 
-
-
-/* Texto encima de la imagen grande */
+/* Texto sobre imagen */
 .texto {
     position: absolute;
     top: 10%;
-    bottom: 20px;
-    left: 130px;
+    left: 10%;
     color: white;
     max-width: 80%;
-    margin-left: -30px;
-    margin-top: 40px;
 }
 
 .texto h1 {
-    font-size: 5rem;
-    margin-bottom: 130px;
-    /* súbela hacia arriba */
+    font-size: 4rem;
     margin-bottom: 2rem;
 }
 
 .texto p {
-    font-size: 2rem;
-    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
     color: #ddd;
 }
 
 .boton {
     display: inline-block;
     padding: 14px 28px;
-    border: 2px solid rgb(249, 249, 249);
+    border: 2px solid #fff;
     border-radius: 20px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+    background: #fff;
+    color: #000;
     font-weight: bold;
+    text-decoration: none;
     transition: 0.3s;
-    background: #ffffff;
 }
 
 .boton:hover {
-    background: rgb(255, 255, 255);
+    background: #eee;
     color: #111;
 }
 
-/* Imágenes pequeñas de abajo */
-.imagenes-abajo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+.principal {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    /* 🔹 ahora los números se ubican respecto a esta imagen */
 }
 
-/*numeros*/
+/* Números con tus posiciones originales */
 .num {
     position: absolute;
-    z-index: 3;
-    /* Asegura que las imágenes estén sobre los planetas */
-}
-
-.num {
     top: 10%;
-    /* Ajusta la posición vertical */
+    /* Ajusta vertical */
     right: 11%;
-    /* Ajusta la posición horizontal */
+    /* Ajusta horizontal */
     width: 200px;
-    /* Tamaño del contenedor */
+    z-index: 3;
 }
 
 .num img {
     width: 45%;
-    /* La imagen ocupa todo el contenedor */
     height: auto;
     margin-left: 300px;
-    /*mover a la derecha*/
     margin-top: -140px;
 }
 
 .num2 {
     position: absolute;
-    z-index: 3;
-    /* Asegura que las imágenes estén sobre los planetas */
-}
-
-.num2 {
     top: 70%;
-    /* Ajusta la posición vertical */
     right: 61%;
-    /* Ajusta la posición horizontal */
     width: 200px;
-    /* Tamaño del contenedor */
+    z-index: 3;
 }
 
 .num2 img {
     width: 35%;
-    /* La imagen ocupa todo el contenedor */
     height: auto;
     margin-top: 40px;
     margin-left: -30px;
@@ -198,23 +169,42 @@ body {
 
 .num3 {
     position: absolute;
-    z-index: 3;
-    /* Asegura que las imágenes estén sobre los planetas */
-}
-
-.num3 {
     top: 70%;
-    /* Ajusta la posición vertical */
     right: 85%;
-    /* Ajusta la posición horizontal */
     width: 200px;
-    /* Tamaño del contenedor */
+    z-index: 3;
 }
 
 .num3 img {
     width: 55%;
-    /* La imagen ocupa todo el contenedor */
     height: auto;
     margin-top: 40px;
     margin-left: -30px;
+}
+
+/* ====== Ajustes RESPONSIVOS ====== */
+
+/* En celulares los números se esconden */
+@media (max-width: 600px) {
+
+    .num,
+    .num2,
+    .num3 {
+        display: none;
+    }
+}
+
+/* En tablets los hacemos más pequeños */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .num img {
+        width: 30%;
+    }
+
+    .num2 img {
+        width: 25%;
+    }
+
+    .num3 img {
+        width: 35%;
+    }
 }
