@@ -61,7 +61,7 @@ body {
 
 .gallery-item {
     width: 100%;
-    padding-bottom: 100%; /* Mantiene el cuadro cuadrado */
+    padding-bottom: 100%; 
     background-color: #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
@@ -81,7 +81,6 @@ body {
     border-radius: 8px;
 }
 
-/* Estilos para las imágenes de los cuadros (placeholders) */
 .gallery-item:nth-child(1) { background-image: url('https://via.placeholder.com/200x200/ff6b6b/ffffff?text=Image1'); background-size: cover; }
 .gallery-item:nth-child(2) { background-image: url('https://via.placeholder.com/200x200/a2d9ff/ffffff?text=Image2'); background-size: cover; }
 .gallery-item:nth-child(3) { background-image: url('https://via.placeholder.com/200x200/ffa500/ffffff?text=Image3'); background-size: cover; }
@@ -90,12 +89,6 @@ body {
 .gallery-item:nth-child(6) { background-image: url('https://via.placeholder.com/200x200/ff8c00/ffffff?text=Image6'); background-size: cover; }
 .gallery-item:nth-child(7) { background-image: url('https://via.placeholder.com/200x200/d3d3d3/ffffff?text=Image7'); background-size: cover; }
 .gallery-item:nth-child(8) { background-image: url('https://via.placeholder.com/200x200/87ceeb/ffffff?text=Image8'); background-size: cover; }
-
-/* Para las imágenes reales, reemplazar las URLs de placeholder con las tuyas */
-/* Por ejemplo:
-.gallery-item:nth-child(1) { background-image: url('tu-imagen-1.jpg'); background-size: cover; }
-*/
-
 
 @media (max-width: 768px) {
     .header-section h1 {
@@ -126,6 +119,6 @@ body {
     }
 
     .gallery {
-        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+        grid-template-columns: 1fr; 
     }
 }
