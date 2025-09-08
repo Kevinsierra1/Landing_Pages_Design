@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Sans-serif;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas iguales */
+    grid-template-areas:
+        "principal derecha"
+        "abajo1 derecha";
+    grid-template-rows: auto auto;
+    height: 100vh;
+    gap: 0px;
+    padding: 0px;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Bloques con imágenes */
+
+.principal {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+}
+
+.principal img {
+    width: 500%;
+    height: 500px;
+    /* altura fija */
+    object-fit: cover;
+
+}
+
+.principal .img-grande {
+    width: 100%;
+    height: 660px;
+    object-fit: cover;
+}
+
+
+.abajo1 {
+    grid-column: 1;
+    grid-area: abajo1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 270px;
+}
+
+.abajo1 .bloque img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+    /*redondeado*/
+}
+
+.bloque-derecha {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    /* ocupa las dos filas */
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 200%;
+    /* ocupa toda la columna */
+    height: 100%;
+}
+
+
+.bloque {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bloque img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 🔹 no se deforma */
+    display: block;
+    flex: 2;
+
+}
+
+
+
+/* Texto encima de la imagen grande */
+.texto {
+    position: absolute;
+    top: 10%;
+    bottom: 20px;
+    left: 130px;
+    color: white;
+    max-width: 80%;
+    margin-left: -30px;
+    margin-top: 40px;
+}
+
+.texto h1 {
+    font-size: 5rem;
+    margin-bottom: 130px;
+    /* súbela hacia arriba */
+    margin-bottom: 2rem;
+}
+
+.texto p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #ddd;
+}
+
+.boton {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 2px solid rgb(249, 249, 249);
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    background: #ffffff;
+}
+
+.boton:hover {
+    background: rgb(255, 255, 255);
+    color: #111;
+}
+
+/* Imágenes pequeñas de abajo */
+.imagenes-abajo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/*numeros*/
+.num {
+    position: absolute;
+    z-index: 3;
+    /* Asegura que las imágenes estén sobre los planetas */
+}
+
+.num {
+    top: 10%;
+    /* Ajusta la posición vertical */
+    right: 11%;
+    /* Ajusta la posición horizontal */
+    width: 200px;
+    /* Tamaño del contenedor */
+}
+
+.num img {
+    width: 45%;
+    /* La imagen ocupa todo el contenedor */
+    height: auto;
+    margin-left: 300px;
+    /*mover a la derecha*/
+    margin-top: -140px;
+}
+
+.num2 {
+    position: absolute;
+    z-index: 3;
+    /* Asegura que las imágenes estén sobre los planetas */
+}
+
+.num2 {
+    top: 70%;
+    /* Ajusta la posición vertical */
+    right: 61%;
+    /* Ajusta la posición horizontal */
+    width: 200px;
+    /* Tamaño del contenedor */
+}
+
+.num2 img {
+    width: 35%;
+    /* La imagen ocupa todo el contenedor */
+    height: auto;
+    margin-top: 40px;
+    margin-left: -30px;
+}
+
+.num3 {
+    position: absolute;
+    z-index: 3;
+    /* Asegura que las imágenes estén sobre los planetas */
+}
+
+.num3 {
+    top: 70%;
+    /* Ajusta la posición vertical */
+    right: 85%;
+    /* Ajusta la posición horizontal */
+    width: 200px;
+    /* Tamaño del contenedor */
+}
+
+.num3 img {
+    width: 55%;
+    /* La imagen ocupa todo el contenedor */
+    height: auto;
+    margin-top: 40px;
+    margin-left: -30px;
+}
